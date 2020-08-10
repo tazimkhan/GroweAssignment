@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            background-color: lightseagreen;
+        }
+        table{
+            margin: 250px 100px 100px 600px;
+            border: 25px solid slateblue;
+            padding: 10px;
+            color: blueviolet;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <table >
+        <form action="./assignment1.html" method="GET">
+        <tr><td><h2 style="background-color: slategray; font-size: 40px;color: springgreen;">Application Form</h2></td></tr>
+        <tr><td>Name:<br> <input  type="text" id="fname" name="name" disabled ></td></tr>
+        <tr><td>Email:<br> <input type="email" id="mail" name="email" disabled></td></tr>
+        <tr><td>Add:<br> <input type="address" id="add" name="add" disabled></td></tr>
+        <tr><td>Gender: <br> <input type="radio" id="radio" name="gender" disabled>Male <input type="radio" id="radio2" name="gender" disabled>Female</td></tr>
+        <tr><td>Phn No:<br> <input type="number" id="num" name="phn num" disabled></td></tr>
+        <tr><td><input type="reset" id="reset" name="reset" disabled><button type="button" id="button" name='button'  style="background-color: green; ">enable</button><input type="submit" id="submit" name="submit" disabled></td></tr>
+       
+    </form>
+    </table>
+    <!-- <h2>HTML Iframes example</h2>    
+<p>Use the height and width attributes to specify the size of the iframe:</p>    
+<iframe src="https://www.javatpoint.com/" height="300" width="400"></iframe> -->
+
+<script>
+    var y=document.getElementById('button');
+    y.addEventListener('click',abc);
+    function abc(){
+        if(y.innerHTML=='enable'){  
+            document.getElementById('button').innerHTML='disable';
+            document.getElementById("button").style.backgroundColor='red';
+            console.log(y.value);
+            document.getElementById('fname').disabled=false;
+            document.getElementById('add').disabled=false;
+            document.getElementById('radio').disabled=false;
+            document.getElementById('radio2').disabled=false;
+            document.getElementById('mail').disabled=false;
+            document.getElementById('reset').disabled=false;
+            document.getElementById('submit').disabled=false;
+            document.getElementById('num').disabled=false;
+    }else{
+            document.getElementById('button').innerHTML='enable';
+            document.getElementById("button").style.backgroundColor='green';
+            console.log(y.value);
+            document.getElementById('fname').disabled=true;
+            document.getElementById('add').disabled=true;
+            document.getElementById('radio').disabled=true;
+            document.getElementById('radio2').disabled=true;
+            document.getElementById('mail').disabled=true;
+            document.getElementById('reset').disabled=true;
+            document.getElementById('submit').disabled=true;
+            document.getElementById('num').disabled=true;
+        }}
+</script>
+</body>
+</html>
